@@ -28,3 +28,7 @@
    ```bash
    kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"|base64 -d;echo
    ```
+
+DEMO
+
+[![asciicast](https://asciinema.org/a/Xh9vtDaAXJ60MDZao60gm0WeB.svg)](https://asciinema.org/a/Xh9vtDaAXJ60MDZao60gm0WeB)
