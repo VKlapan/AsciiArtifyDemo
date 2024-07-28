@@ -36,23 +36,23 @@
 
 3. Застосуйте конфігурацію (файл hello-world.yaml) для розгортання "Hello World" застосунку:
     ```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  name: hello-world
-spec:
-  containers:
-    - name: hello
-      image: tutum/hello-world
-      ports:
-        - containerPort: 80
-      resources:
-        limits:
-          memory: "128Mi"
-          cpu: "500m"
-        requests:
-          memory: "64Mi"
-          cpu: "250m"
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: hello-world
+    spec:
+      containers:
+        - name: hello
+          image: tutum/hello-world
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              memory: "128Mi"
+              cpu: "500m"
+            requests:
+              memory: "64Mi"
+              cpu: "250m"
     ```
 
     ```bash
