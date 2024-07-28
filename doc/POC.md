@@ -19,6 +19,9 @@
    kubectl port-forward svc/argocd-server -n argocd 8080:443&
    ```
 6. Отримаємо пароль для логіну admin в Web-інтерфейс ArgoCD за адресою localhost:8080
+
+![Alt text](https://monosnap.com/image/C9egsfmeZheVkO2mq7JZcX8IqR3KF7)
+
    ```bash
    kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}"
    ```
