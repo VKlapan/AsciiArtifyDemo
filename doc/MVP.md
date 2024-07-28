@@ -2,8 +2,7 @@
 
 1. Демо Argo GUI та синхронізації:
 
-https://monosnap.com/image/iBlonx0hVlaQg3YT1UKYnMZRMo24W1
-
+https://monosnap.com/direct/KU3fmHEdpuqTMtBN9NYwwvoJgthzSj
 
 2. Демо взаємодії з додатком:
 
