@@ -34,18 +34,25 @@
     k3d cluster create mycluster
     ```
 
-3. Застосуйте конфігурацію для розгортання "Hello World" застосунку:
+3. Застосуйте конфігурацію (файл hello-world.yaml) для розгортання "Hello World" застосунку:
     ```yaml
-    apiVersion: v1
-    kind: Pod
-    metadata:
-      name: hello-world
-    spec:
-      containers:
-      - name: hello
-        image: tutum/hello-world
-        ports:
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-world
+spec:
+  containers:
+    - name: hello
+      image: tutum/hello-world
+      ports:
         - containerPort: 80
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+        requests:
+          memory: "64Mi"
+          cpu: "250m"
     ```
 
     ```bash
@@ -57,12 +64,17 @@
     kubectl get pods
     ```
 
-5. Перевірте доступність застосунку:
+5. Перевірте доступність застосунку, "прокинувши" внутрішній порт 8080 на зовнішній порт 80:
     ```bash
     kubectl port-forward pod/hello-world 8080:80
     ```
 
     Відкрийте у браузері: [http://localhost:8080](http://localhost:8080)
+    Мусите побачити таку сторінку: [https://monosnap.com/direct/EM9rMy9ItosRZ9GXS3wszwVsMjS2yC]
+
+Демо використання K3D: [https://asciinema.org/a/NMc4iWgvg5euiQXEwA3Snw1rn]
+
+[![asciicast](https://asciinema.org/a/NMc4iWgvg5euiQXEwA3Snw1rn.svg)](https://asciinema.org/a/NMc4iWgvg5euiQXEwA3Snw1rn)
 
 ## Висновки
 
